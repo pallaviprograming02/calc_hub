@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  smartcalc-hub:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: smartcalc-hub
+    ports:
+      - "8080:80"
+    restart: unless-stopped
